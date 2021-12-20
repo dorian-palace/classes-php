@@ -26,7 +26,7 @@ class Userpdo
         $this->lastname = $lastname;
 
 
-        $bdd = new PDO('mysql:host=localhost;dename=classes', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classes', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
@@ -42,7 +42,7 @@ class Userpdo
     public function connect($login, $password)
     {
 
-        $bdd = new PDO('mysql:host=localhost;dename=classes', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classes', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
@@ -55,7 +55,7 @@ class Userpdo
     public function disconnect()
     {
 
-        $bdd = new PDO('mysql:host=localhost;dename=classes', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classes', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $disconect = $bdd->prepare("SELECT * FROM utilisateurs");
@@ -66,7 +66,7 @@ class Userpdo
     public  function delete()
     {
 
-        $bdd = new PDO('mysql:host=localhost;dename=classes', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classes', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $delete = $bdd->prepare("DELETE from utlisateurs WHERE id = 'id'");
@@ -77,7 +77,7 @@ class Userpdo
     {
 
 
-        $bdd = new PDO('mysql:host=localhost;dename=classes', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classes', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $update = $bdd->prepare("UPDATE utilisateus SET login = ?, password = ?, email = ? , lastname = ?");
@@ -93,7 +93,7 @@ class Userpdo
     public function isConnected($login, $password, $email, $firstname, $lastname)
     {
 
-        $bdd = new PDO('mysql:host=localhost;dename=classes', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classes', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $isconect = $bdd->prepare("SELECT * FROM utilisateurs");
@@ -111,7 +111,7 @@ class Userpdo
     {
 
 
-        $bdd = new PDO('mysql:host=localhost;dename=classes', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classes', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $id_session = $_SESSION['id'];
@@ -131,7 +131,7 @@ class Userpdo
     public function getLogin()
     {
 
-        $bdd = new PDO('mysql:host=localhost;dename=classes', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classes', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
@@ -147,7 +147,7 @@ class Userpdo
     public function getEmail()
     {
 
-        $bdd = new PDO('mysql:host=localhost;dename=classes', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classes', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
@@ -163,7 +163,7 @@ class Userpdo
     public function getFirstname()
     {
 
-        $bdd = new PDO('mysql:host=localhost;dename=classes', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classes', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
@@ -180,7 +180,7 @@ class Userpdo
     public function getLastname()
     {
 
-        $bdd = new PDO('mysql:host=localhost;dename=classes', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classes', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
